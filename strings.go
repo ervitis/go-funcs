@@ -5,10 +5,6 @@ type (
 		fns
 	}
 
-	FS struct {
-		*fns
-	}
-
 	Fs interface {
 		All(func(string) bool) FS
 		Any(fn func(string) bool) FS
