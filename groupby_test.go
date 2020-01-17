@@ -6,15 +6,13 @@ import (
 )
 
 func TestGroup_GroupBy(t *testing.T) {
-	type Test struct {
-		Name    string
-		Surname string
-		Age     int8
-		Country string
-	}
-
 	Desc(t, "Testing Group By", func(it It) {
-		data := []Test{
+		data := []struct {
+			Name    string
+			Surname string
+			Age     int
+			Country string
+		}{
 			{Name: "AAAAA", Surname: "AAAAA", Age: 20, Country: "Spain",},
 			{Name: "BBBBB", Surname: "BBBBB", Age: 45, Country: "England",},
 			{Name: "CCCCCC", Surname: "CCCCCC", Age: 20, Country: "Spain",},
